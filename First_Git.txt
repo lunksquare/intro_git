@@ -10,6 +10,8 @@ Gitのコマンド
 ・git commit //ローカルリポジトリにコミット
 ・git rm //削除
 ・git status //リポジトリの現在の状況を確認
+・git log //変更履歴を確認
+・git diff //変更差分を確認
 
 
 commit時のvimの操作
@@ -23,4 +25,32 @@ commit時のvimの操作
 ・複数ファイルの変更
 
 現在の状況を確認
-git statusでGtiリポジトリの変更の差分を確認できる
+git statusでGtiリポジトリの変更の差分を確認できる。
+
+変更履歴を確認
+git logコマンドでリポジトリにコミットされたログを確認できる。
+入力後のメッセージ
+~$ git log
+commit ハッシュ値
+Author: ユーザー名とアドレス
+Datte: コミットの日付
+
+オプションを活用することでより便利になる。
+・git log --oneline //一行で表示する
+・git log -p index.html //ファイルの差分を表示する
+・git log -n x //最新のログx個を表示する
+
+Gitコマンドを開いているときの操作
+・j //下に移動
+・k //上に移動
+・q //終了
+
+変更差分を確認
+git diff //differenceの略
+・add、commitする前に確認するために良く利用される。
+
+ステージングとの差分を確認する
+git diff
+
+ステージングとコミットの差分を確認する
+git diff HEAD
